@@ -7,13 +7,17 @@
   /**
    * colors
    */
-
+   --spanish-gray: hsl(0, 0%, 60%);
+   --sonic-silver: hsl(0, 0%, 47%);
   --salmon-pink: #1e73be;
   --ocean-green: #81d742;
   --davys-gray: hsl(0, 0%, 33%);
   --cultured: hsl(0, 0%, 93%);
+  --sandy-brown: hsl(29, 90%, 65%);
   --white: hsl(0, 100%, 100%);
   --onyx: hsl(0, 0%, 27%);
+  --bittersweet: hsl(0, 100%, 70%);
+  --eerie-black: hsl(0, 0%, 13%);
 
   /**   
    * typography
