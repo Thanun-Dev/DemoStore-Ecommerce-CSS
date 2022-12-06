@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Store</title>
+  <!-- favicon-->
+  <link rel="shortcut icon" href="../img/online-shopping.png" type="image/x-icon">
+  <!--custom css link-->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="overlay" data-overlay></div>
+    <!--MODAL-->
+    <div class="modal" data-modal>
+        <div class="modal-close-overlay" data-modal-overlay></div>
+        <div class="modal-content">
+            <button class="modal-close-btn" data-modal-close>
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+            <div class="newsletter-img">
+                <img src="../img/newspaper.png" alt="subscribe newsletter" width="300" height="400">
+            </div>
+            <div class="newsletter">
+                <form action="#">
+                    <div class="newsletter-header">
+                        <h3 class="newsletter-title">Subscribe Newsletter.</h3>
+                        <p class="newsletter-desc">Subscribe the <b>Demo Store</b> to get latest products and discount update.</p>
+                    </div>
+                    <input type="email" name="email" class="email-field" placeholder="Email Address" required>
+                    <button type="submit" class="btn-newsletter">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<!-- NOTIFICATION TOAST-->
+    <div class="notification-toast" data-toast>
+        <button class="toast-close-btn" data-toast-close>
+            <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <div class="toast-banner">
+            <img src="../img/product/macbook-air.png" alt="Macbook air" width="80" height="70">
+        </div>
+        <div class="toast-detail">
+            <p class="toast-message">Someone in new just bought</p>
+            <p class="toast-title">Macbook Air M1</p>
+            <p class="toast-meta"><time datetime="PT2M">2 Minutes</time> ago</p>
+        </div>
+    </div>
+<!--HEADER-->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <ul class="header-social-container">
+                    <li>
+                        <a href="#" class="social-link">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="#" class="social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+                <div class="header-alert-news">
+                    <p><b>Free Shipping</b></p>
+                </div>
+                <div class="header-top-actions">
+                    <select name="currency">
+                        <option value="usd">USD &dollar;</option>
+                        <option value="eur">RIEL &#6107;</option>
+                    </select>
+                    <div class="translator" style="display: flex; gap: 10px;">
+                        <a href="#" onclick="doGTranslate('en|en');return false;" title="English" style="display: flex; gap: 5px;"><img src="../img/en.svg" height="24" width="24" alt="English" /> <span >EN</span></a> <a href="#" onclick="doGTranslate('en|km');return false;" title="ភាសាខ្មែរ" style="display: flex; gap: 5px;"><img src="../img/km.svg" height="24" width="24" alt="ភាសាខ្មែរ" /> <span>KH</span></a>
+                        <div id="google_translate_element2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <a href="../index.html" class="header-logo">
+                    <img src="../img/Demo-logo.png" alt="Anon's logo" width="200">
+                </a>
+                <div class="header-search-container">
+                    <input type="search" name="search" class="search-field" placeholder="Search your products">
+                    <button class="search-btn">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </button>
+                </div>
+                <div class="header-user-actions">
+                    <div class="dropdown">
+                      <button class="action-btn">
+                          <ion-icon name="person-outline"></ion-icon>
+                      </button>
+                      <div class="dropdown-content">
+                        <a href="../pages/myaccount.html">My Account</a>
+                        <a href="../pages/login.html">Login</a>
+                        <a href="../pages/register.html">Register</a>
+                        <a href="../pages/order-history.html">Order History</a>
+                        </div>
+                    </div>
+                     <button class="action-btn">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <span class="count">1</span>
+                    </button>
+                     <div class="dropdown">
+                      <button class="action-btn">
+                          <ion-icon name="bag-handle-outline"></ion-icon>
+                          <span class="count">1</span>
+                      </button>
+                      <div class="dropdown-content">
+                        <a href="../pages/cart.html">Cart</a>
+                        <a href="../pages/checkout.html">Checkout</a>
+                        <a href="../pages/order.html">Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="desktop-navigation-menu">
+            <div class="container">
+                <ul class="desktop-menu-category-list">
+                    <li class="menu-category">
+                        <a href="../index.html" class="menu-title">Home</a>
+                    </li>
+                    <li class="menu-category">
+                        <a href="../pages/product.html" class="menu-title">Pruduct</a>
+                        <div class="dropdown-panel">
+                            <ul class="dropdown-panel-list">
+
+                                <li class="menu-title">
+                                  <a href="#">Laptop</a>
+                                </li>
+
+                                <li class="panel-list-item">
+                                  <a href="#">Apple</a>
+                                </li>
+
+                                <li class="panel-list-item">
+                                  <a href="#">MSI</a>
+                                </li>
+
+                                <li class="panel-list-item">
+                                  <a href="#">Asus</a>
+                                </li>
+
+                                <li class="panel-list-item">
+                                  <a href="#">Acer</a>
+                                </li>
+
+                                <li class="panel-list-item">
+                                  <a href="#">Dell</a>
+                                </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">
+                            <img src="../img/laptop-category.png" alt="Laptop collection" style="width:150px; margin: 0 auto;">
+                          </a>
+                        </li>
+
+                      </ul>
+
+                      <ul class="dropdown-panel-list">
+
+                        <li class="menu-title">
+                          <a href="#">Desktop</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">All In One PC</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">Brand Desktop</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">Custom PC</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">Office Desktop</a>
+                        </li>
+                        <li class="panel-list-item">
+                            <a href="#">&nbsp;</a>
+                        </li>
+                        <li class="panel-list-item">
+                          <a href="#">
+                            <img src="../img/desktop-category.png" alt="Desktop" style="width: 170px; margin: 0px auto;">
+                          </a>
+                        </li>
+
+                      </ul>
+
+                      <ul class="dropdown-panel-list">
+
+                        <li class="menu-title">
+                          <a href="#">Gaming</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">Playstation</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">XBox</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">Nintendo</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">Steam Deck</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">Sega</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">
+                            <img src="../img/gaming-category.png" alt="Gaming" style="width: 140px; margin: 0px auto;">
+                          </a>
+                        </li>
+
+                      </ul>
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">Peripheral</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Keyboard</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Mouse</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Speaker</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">USB</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Microphone</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="../img/peripheral-category.png" alt="mouse collection" style="width: 150px; margin: 0px auto;" >
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+                    </li>
+
+                    <li class="menu-category">
+                        <a href="../pages/blog.html" class="menu-title">Blog</a>
+                    </li>
+                    <li class="menu-category">
+                        <a href="../pages/about.html" class="menu-title">About</a>
+                    </li>
+                    <li class="menu-category">
+                        <a href="../pages/contact.html" class="menu-title">Contact</a>
+                    </li>
+
+                    <li class="menu-category">
+                        <a href="../pages/faq.html" class="menu-title">Faq</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="mobile-bottom-navigation">
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+      <button class="action-btn">
+        <a href="../index.html">
+            <ion-icon name="home-outline"></ion-icon>
+        </a>
+      </button>
+      <button class="action-btn">
+        <a href="../pages/myaccount.html">
+            <ion-icon name="person-outline"></ion-icon>
+        </a>
+      </button>
+      <button class="action-btn">
+        <a href="../pages/cart.html">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="count">1</span>
+        </a>
+      </button>
+      <button class="action-btn">
+        <a href="../pages/wishlist.html">
+            <ion-icon name="heart-outline"></ion-icon>
+            <span class="count">1</span>
+        </a>
+      </button>
+
+      
+
+        </div>
+
+    <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
+
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+
+        <li class="menu-category">
+          <a href="../index.html" class="menu-title">Home</a>
+        </li>
+        <li class="menu-category">
+            <a href="../pages/product.html" class="menu-title">Product</a>
+          </li>
+
+        <li class="menu-category">
+
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Category</p>
+  
+              <div>
+                <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+              </div>
+            </button>
+  
+            <ul class="submenu-category-list" data-accordion>
+  
+              <li class="submenu-category">
+                <a href="../pages/category.html" class="submenu-title">Laptop</a>
+              </li>
+  
+              <li class="submenu-category">
+                <a href="../pages/category.html" class="submenu-title">Desktop</a>
+              </li>
+  
+              <li class="submenu-category">
+                <a href="../pages/category.html" class="submenu-title">Gaming</a>
+              </li>
+  
+              <li class="submenu-category">
+                <a href="../pages/category.html" class="submenu-title">Peripheral</a>
+              </li>
+              <li class="submenu-category">
+                <a href="../pages/category.html" class="submenu-title">PC Component</a>
+              </li>
+              <li class="submenu-category">
+                <a href="../pages/category.html" class="submenu-title">Networking</a>
+              </li>
+              <li class="submenu-category">
+                <a href="../pages/category.html" class="submenu-title">Security Device</a>
+              </li>
+              <li class="submenu-category">
+                <a href="../pages/category.html" class="submenu-title">Software</a>
+              </li>
+            </ul>
+  
+          </li>
+
+        <li class="menu-category">
+          <a href="../pages/blog.html" class="menu-title">Blog</a>
+        </li>
+
+        <li class="menu-category">
+          <a href="../pages/about.html" class="menu-title">About</a>
+        </li>
+        <li class="menu-category">
+            <a href="../pages/contact.html" class="menu-title">Contact</a>
+          </li>
+          <li class="menu-category">
+            <a href="../pages/faq.html" class="menu-title">Faq</a>
+          </li>
+
+      </ul>
+
+      <div class="menu-bottom">
+
+        <ul class="menu-category-list">
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Currency</p>
+              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+            </button>
+
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">USD &dollar;</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">RIEL &#6107;</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-category">
+            <div class="translator" style="display: flex; gap: 10px;">
+              <a href="#" onclick="doGTranslate('en|en');return false;" title="English" style="display: flex; gap: 5px;"><img src="../img/en.svg" height="24" width="24" alt="English" /> <span >EN</span></a> <a href="#" onclick="doGTranslate('en|km');return false;" title="ភាសាខ្មែរ" style="display: flex; gap: 5px;"><img src="../img/km.svg" height="24" width="24" alt="ភាសាខ្មែរ" /> <span>KH</span></a>
+              <div id="google_translate_element2"></div>
+          </div>
+
+          </li>
+
+        </ul>
+
+        <ul class="menu-social-container">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+  <div class="container" style="margin: 30px auto;">
+    <h1 class="text-primary" style="text-align: center;">PRIVACY POLICY</h1>
+    <div class="container shadow"  style="padding: 30px;">
+      <div>
+        <p>&nbsp; &nbsp;At DEMO Shop, accessible from demoshop.online, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by DEMO Shop and how we use it.</p>
+        <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
+        <p>This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in DEMO Shop. This policy is not applicable to any information collected offline or via channels other than this website. Our Privacy Policy was created with the help of the <a href="https://www.privacypolicygenerator.info/" target="_blank" class=" text-decoration-none">Free Privacy Policy Generator</a>.</p>
+        <h2 class="text-center">Consent</h2>
+        <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+        <h2 class="text-center ">Information we collect</h2>
+        <p>The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.</p>
+        <p>If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.</p>
+        <p>When you register for an Account, we may ask for your contact information, including items such as name, company name, address, email address, and telephone number.</p>
+        <h2 class="text-center">How we use your information</h2>
+        <p>We use the information we collect in various ways, including to:</p>
+        <ul>
+        <li>Provide, operate, and maintain our website</li>
+        <li>Improve, personalize, and expand our website</li>
+        <li>Understand and analyze how you use our website</li>
+        <li>Develop new products, services, features, and functionality</li>
+        <li>Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the website, and for marketing and promotional purposes</li>
+        <li>Send you emails</li>
+        <li>Find and prevent fraud</li>
+        </ul>
+        <h2 class="text-center ">Log Files</h2>
+        <p>DEMO Shop follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services’ analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users’ movement on the website, and gathering demographic information.</p>
+        <h2 class="text-center ">Cookies and Web Beacons</h2>
+        <p>Like any other website, DEMO Shop uses ‘cookies’. These cookies are used to store information including visitors’ preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users’ experience by customizing our web page content based on visitors’ browser type and/or other information.</p>
+        <h2 class="text-center ">Advertising Partners Privacy Policies</h2>
+        <p>You may consult this list to find the Privacy Policy for each of the advertising partners of DEMO Shop.</p>
+        <p>Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on DEMO Shop, which are sent directly to users’ browser. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.</p>
+        <p>Note that DEMO Shop has no access to or control over these cookies that are used by third-party advertisers.</p>
+        <h2 class="text-center ">Third Party Privacy Policies</h2>
+        <p>DEMO Shop’s Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.</p>
+        <p>You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers’ respective websites.</p>
+        <h2 class="text-center ">CCPA Privacy Rights (Do Not Sell My Personal Information)</h2>
+        <p>Under the CCPA, among other rights, California consumers have the right to:</p>
+        <p>Request that a business that collects a consumer’s personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.</p>
+        <p>Request that a business delete any personal data about the consumer that a business has collected.</p>
+        <p>Request that a business that sells a consumer’s personal data, not sell the consumer’s personal data.</p>
+        <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
+        <h2 class="text-center ">GDPR Data Protection Rights</h2>
+        <p>We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p>
+        <p>The right to access – You have the right to request copies of your personal data. We may charge you a small fee for this service.</p>
+        <p>The right to rectification – You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete.</p>
+        <p>The right to erasure – You have the right to request that we erase your personal data, under certain conditions.</p>
+        <p>The right to restrict processing – You have the right to request that we restrict the processing of your personal data, under certain conditions.</p>
+        <p>The right to object to processing – You have the right to object to our processing of your personal data, under certain conditions.</p>
+        <p>The right to data portability – You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.</p>
+        <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
+        <h2 class="text-center">Children’s Information</h2>
+        <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
+        <p>DEMO Shop does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
+        
+    </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  
+
+
+
+
+    <!--FOOTER-->
+    <footer>
+      <div class="footer-nav">
+  
+        <div class="container">
+  
+          <div class="footer-nav-list">
+              <h1><a href="../index.html" style="color: #1e73be;">DEMO Store</a></h1>
+              <p style="color:aliceblue; font-size: 15px;">Welcome to DEMO Store. We will bring you only high quality products.</p>
+          </div>
+  
+          <ul class="footer-nav-list">
+          
+            <li class="footer-nav-item">
+              <h2 class="nav-title">Menu</h2>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../index.html" class="footer-nav-link">Home</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/product.html" class="footer-nav-link">Product</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/blog.html" class="footer-nav-link">Blog</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/about.html" class="footer-nav-link">About</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="../pages/contact.html" class="footer-nav-link">Contact</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/faq.html" class="footer-nav-link">FAQ</a>
+            </li>
+          
+          </ul>
+  
+          <ul class="footer-nav-list">
+          
+            <li class="footer-nav-item">
+              <h2 class="nav-title">My Account</h2>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/myaccount.html" class="footer-nav-link">Account Profile</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/register.html" class="footer-nav-link">Register</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/login.html" class="footer-nav-link">Login</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/wishlist.html" class="footer-nav-link">Wishlist</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/order-history.html" class="footer-nav-link">Order History</a>
+            </li>
+          
+          </ul>
+  
+          <ul class="footer-nav-list">
+          
+            <li class="footer-nav-item">
+              <h2 class="nav-title">Pages</h2>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/cart.html" class="footer-nav-link">Cart</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/checkout.html" class="footer-nav-link">Checkout</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="../pages/category.html" class="footer-nav-link">Category</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="../pages/product-details.html" class="footer-nav-link">Product Details</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/terms-and-conditions.html" class="footer-nav-link">Terms And Conditions</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/privacy-policy.html" class="footer-nav-link">Privacy Policy</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="../pages/return-policy.html" class="footer-nav-link">Return and Refund Policy</a>
+            </li>
+          
+          </ul>
+  
+          <ul class="footer-nav-list">
+  
+            <li class="footer-nav-item">
+              <h2 class="nav-title">Contact</h2>
+            </li>
+  
+            <li class="footer-nav-item flex">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+  
+              <address class="content">
+                Toulkok, Phnom Penh, Cambodia
+              </address>
+            </li>
+  
+            <li class="footer-nav-item flex">
+              <div class="icon-box">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+  
+              <a href="tel:+855339957" class="footer-nav-link">+855 61339957</a>
+            </li>
+  
+            <li class="footer-nav-item flex">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+  
+              <a href="mailto:cc.thanun@gmail.com" class="footer-nav-link">cc.thanun@gmail.com</a>
+            </li>
+  
+          </ul>
+  
+          <ul class="footer-nav-list">
+  
+            <li class="footer-nav-item">
+              <h2 class="nav-title">Follow Us</h2>
+            </li>
+  
+            <li>
+              <ul class="social-link">
+  
+                <li class="footer-nav-item">
+                  <a href="#" class="footer-nav-link">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+  
+                <li class="footer-nav-item">
+                  <a href="#" class="footer-nav-link">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+  
+                <li class="footer-nav-item">
+                  <a href="#" class="footer-nav-link">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </li>
+  
+                <li class="footer-nav-item">
+                  <a href="#" class="footer-nav-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+  
+              </ul>
+            </li>
+  
+          </ul>
+  
+        </div>
+  
+      </div>
+  
+      <div class="footer-bottom">
+  
+        <div class="container">
+  
+          <img src="../img/payment.png" alt="payment method" class="payment-img">
+  
+          <p class="copyright">
+            Copyright &copy; <a href="../index.html">DEMO Store</a> all rights reserved.
+          </p>
+  
+        </div>
+  
+      </div>
+  
+    </footer>
+  
+    <!--custom js link-->
+    <script src="../js/script.js"></script>
+    <!--Translator-->
+    <script src="../js/translator.js"></script>
+    <!--ionicon link-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  </body>
+  </html>

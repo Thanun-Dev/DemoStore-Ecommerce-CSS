@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Store</title>
+  <!-- favicon-->
+  <link rel="shortcut icon" href="../img/online-shopping.png" type="image/x-icon">
+  <!--custom css link-->
+  <link rel="stylesheet" href="../css/style.css">
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <div class="overlay" data-overlay></div>
+    <!--MODAL-->
+    <div class="modal" data-modal>
+        <div class="modal-close-overlay" data-modal-overlay></div>
+        <div class="modal-content">
+            <button class="modal-close-btn" data-modal-close>
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+            <div class="newsletter-img">
+                <img src="../img/newspaper.png" alt="subscribe newsletter" width="300" height="400">
+            </div>
+            <div class="newsletter">
+                <form action="#">
+                    <div class="newsletter-header">
+                        <h3 class="newsletter-title">Subscribe Newsletter.</h3>
+                        <p class="newsletter-desc">Subscribe the <b>Demo Store</b> to get latest products and discount update.</p>
+                    </div>
+                    <input type="email" name="email" class="email-field" placeholder="Email Address" required>
+                    <button type="submit" class="btn-newsletter">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<!-- NOTIFICATION TOAST-->
+    <div class="notification-toast" data-toast>
+        <button class="toast-close-btn" data-toast-close>
+            <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <div class="toast-banner">
+            <img src="../img/product/macbook-air.png" alt="Macbook air" width="80" height="70">
+        </div>
+        <div class="toast-detail">
+            <p class="toast-message">Someone in new just bought</p>
+            <p class="toast-title">Macbook Air M1</p>
+            <p class="toast-meta"><time datetime="PT2M">2 Minutes</time> ago</p>
+        </div>
+    </div>
+<!--HEADER-->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <ul class="header-social-container">
+                    <li>
+                        <a href="#" class="social-link">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="#" class="social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+                <div class="header-alert-news">
+                    <p><b>Free Shipping</b></p>
+                </div>
+                <div class="header-top-actions">
+                    <select name="currency">
+                        <option value="usd">USD &dollar;</option>
+                        <option value="eur">RIEL &#6107;</option>
+                    </select>
+                    <div class="translator" style="display: flex; gap: 10px;">
+                        <a href="#" onclick="doGTranslate('en|en');return false;" title="English" style="display: flex; gap: 5px;"><img src="../img/en.svg" height="24" width="24" alt="English" /> <span >EN</span></a> <a href="#" onclick="doGTranslate('en|km');return false;" title="ភាសាខ្មែរ" style="display: flex; gap: 5px;"><img src="../img/km.svg" height="24" width="24" alt="ភាសាខ្មែរ" /> <span>KH</span></a>
+                        <div id="google_translate_element2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <a href="../index.html" class="header-logo">
+                    <img src="../img/Demo-logo.png" alt="Anon's logo" width="200">
+                </a>
+                <div class="header-search-container">
+                    <input type="search" name="search" class="search-field" placeholder="Search your products">
+                    <button class="search-btn">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </button>
+                </div>
+                <div class="header-user-actions">
+                    <div class="dropdown">
+                      <button class="action-btn">
+                          <ion-icon name="person-outline"></ion-icon>
+                      </button>
+                      <div class="dropdown-content">
+                        <a href="../pages/myaccount.html">My Account</a>
+                        <a href="../pages/login.html">Login</a>
+                        <a href="../pages/register.html">Register</a>
+                        <a href="../pages/order-history.html">Order History</a>
+                        </div>
+                    </div>
+                     <button class="action-btn">
+                        <ion-icon name="heart-outline"></ion-icon>
+                        <span class="count">1</span>
+                    </button>
+                     <div class="dropdown">
+                      <button class="action-btn">
+                          <ion-icon name="bag-handle-outline"></ion-icon>
+                          <span class="count">1</span>
+                      </button>
+                      <div class="dropdown-content">
+                        <a href="../pages/cart.html">Cart</a>
+                        <a href="../pages/checkout.html">Checkout</a>
+                        <a href="../pages/order.html">Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="desktop-navigation-menu">
+            <div class="container">
+                <ul class="desktop-menu-category-list">
+                    <li class="menu-category">
+                        <a href="../index.html" class="menu-title">Home</a>
+                    </li>
+                    <li class="menu-category">
+                        <a href="../pages/product.html" class="menu-title">Pruduct</a>
+                        <div class="dropdown-panel">
+                            <ul class="dropdown-panel-list">
+
+                                <li class="menu-title">
+                                  <a href="#">Laptop</a>
+                                </li>
+
+                                <li class="panel-list-item">
+                                  <a href="#">Apple</a>
+                                </li>
+
+                                <li class="panel-list-item">
+                                  <a href="#">MSI</a>
+                                </li>
+
+                                <li class="panel-list-item">
+                                  <a href="#">Asus</a>
+                                </li>
+
+                                <li class="panel-list-item">
+                                  <a href="#">Acer</a>
+                                </li>
+
+                                <li class="panel-list-item">
+                                  <a href="#">Dell</a>
+                                </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">
+                            <img src="../img/laptop-category.png" alt="Laptop collection" style="width:150px; margin: 0 auto;">
+                          </a>
+                        </li>
+
+                      </ul>
+
+                      <ul class="dropdown-panel-list">
+
+                        <li class="menu-title">
+                          <a href="#">Desktop</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">All In One PC</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">Brand Desktop</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">Custom PC</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">Office Desktop</a>
+                        </li>
+                        <li class="panel-list-item">
+                            <a href="#">&nbsp;</a>
+                        </li>
+                        <li class="panel-list-item">
+                          <a href="#">
+                            <img src="../img/desktop-category.png" alt="Desktop" style="width: 170px; margin: 0px auto;">
+                          </a>
+                        </li>
+
+                      </ul>
+
+                      <ul class="dropdown-panel-list">
+
+                        <li class="menu-title">
+                          <a href="#">Gaming</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">Playstation</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">XBox</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">Nintendo</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">Steam Deck</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">Sega</a>
+                        </li>
+
+                        <li class="panel-list-item">
+                          <a href="#">
+                            <img src="../img/gaming-category.png" alt="Gaming" style="width: 140px; margin: 0px auto;">
+                          </a>
+                        </li>
+
+                      </ul>
+
+              <ul class="dropdown-panel-list">
+
+                <li class="menu-title">
+                  <a href="#">Peripheral</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Keyboard</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Mouse</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Speaker</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">USB</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Microphone</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="../img/peripheral-category.png" alt="mouse collection" style="width: 150px; margin: 0px auto;" >
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+                    </li>
+
+                    <li class="menu-category">
+                        <a href="../pages/blog.html" class="menu-title">Blog</a>
+                    </li>
+                    <li class="menu-category">
+                        <a href="../pages/about.html" class="menu-title">About</a>
+                    </li>
+                    <li class="menu-category">
+                        <a href="../pages/contact.html" class="menu-title">Contact</a>
+                    </li>
+
+                    <li class="menu-category">
+                        <a href="../pages/faq.html" class="menu-title">Faq</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="mobile-bottom-navigation">
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+      <button class="action-btn">
+        <a href="../index.html">
+            <ion-icon name="home-outline"></ion-icon>
+        </a>
+      </button>
+      <button class="action-btn">
+        <a href="../pages/myaccount.html">
+            <ion-icon name="person-outline"></ion-icon>
+        </a>
+      </button>
+      <button class="action-btn">
+        <a href="../pages/cart.html">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="count">1</span>
+        </a>
+      </button>
+      <button class="action-btn">
+        <a href="../pages/wishlist.html">
+            <ion-icon name="heart-outline"></ion-icon>
+            <span class="count">1</span>
+        </a>
+      </button>
+
+      
+
+        </div>
+
+    <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
+
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+
+        <li class="menu-category">
+          <a href="../index.html" class="menu-title">Home</a>
+        </li>
+        <li class="menu-category">
+            <a href="../pages/product.html" class="menu-title">Product</a>
+          </li>
+
+        <li class="menu-category">
+
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Category</p>
+  
+              <div>
+                <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+              </div>
+            </button>
+  
+            <ul class="submenu-category-list" data-accordion>
+  
+              <li class="submenu-category">
+                <a href="../pages/category.html" class="submenu-title">Laptop</a>
+              </li>
+  
+              <li class="submenu-category">
+                <a href="../pages/category.html" class="submenu-title">Desktop</a>
+              </li>
+  
+              <li class="submenu-category">
+                <a href="../pages/category.html" class="submenu-title">Gaming</a>
+              </li>
+  
+              <li class="submenu-category">
+                <a href="../pages/category.html" class="submenu-title">Peripheral</a>
+              </li>
+              <li class="submenu-category">
+                <a href="../pages/category.html" class="submenu-title">PC Component</a>
+              </li>
+              <li class="submenu-category">
+                <a href="../pages/category.html" class="submenu-title">Networking</a>
+              </li>
+              <li class="submenu-category">
+                <a href="../pages/category.html" class="submenu-title">Security Device</a>
+              </li>
+              <li class="submenu-category">
+                <a href="../pages/category.html" class="submenu-title">Software</a>
+              </li>
+            </ul>
+  
+          </li>
+
+        <li class="menu-category">
+          <a href="../pages/blog.html" class="menu-title">Blog</a>
+        </li>
+
+        <li class="menu-category">
+          <a href="../pages/about.html" class="menu-title">About</a>
+        </li>
+        <li class="menu-category">
+            <a href="../pages/contact.html" class="menu-title">Contact</a>
+          </li>
+          <li class="menu-category">
+            <a href="../pages/faq.html" class="menu-title">Faq</a>
+          </li>
+
+      </ul>
+
+      <div class="menu-bottom">
+
+        <ul class="menu-category-list">
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Currency</p>
+              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+            </button>
+
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">USD &dollar;</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">RIEL &#6107;</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-category">
+            <div class="translator" style="display: flex; gap: 10px;">
+              <a href="#" onclick="doGTranslate('en|en');return false;" title="English" style="display: flex; gap: 5px;"><img src="../img/en.svg" height="24" width="24" alt="English" /> <span >EN</span></a> <a href="#" onclick="doGTranslate('en|km');return false;" title="ភាសាខ្មែរ" style="display: flex; gap: 5px;"><img src="../img/km.svg" height="24" width="24" alt="ភាសាខ្មែរ" /> <span>KH</span></a>
+              <div id="google_translate_element2"></div>
+          </div>
+
+          </li>
+
+        </ul>
+
+        <ul class="menu-social-container">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <div class="single-product" style="margin: 20px auto;">
+    <div class="container">
+        <nav><ul class="breadcrumb">
+            <li><a href="../index.html">Home</a></li>
+            <li>Shop</li>
+            </ul>
+        </nav>
+        <div class="row">
+            <div class="product-left">
+                <div class="product-img">
+                    <img src="../img/product/macbook-pro-14.png" class="img-fluid" alt="">
+                </div>
+                <div class="share d-flex">
+                    <h5>Share on: </h5>
+                    <a href="https://www.facebook.com/thanun2903" class="text-primary" target="_blank">
+                        <i class="fa-brands fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/cc_thanun" class="text-primary" target="_blank">
+                        <i class="fa-brands fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://twitter.com/mrrdemo" class="text-primary" target="_blank">
+                        <i class="fa-brands fa-twitter fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="product-right" style="line-height: 50px;">
+                <h2 class="text-primary" style="text-align: center;">MacBook Pro 14</h2>
+                <hr>
+                <p class="text-center">1.859,00$</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><label for="color">Color</label></th>
+                            <td>
+                                <select id="color" style="margin-left: 10px;">
+                                    <option value="">Choose Option</option>
+                                    <option value="sliver" selected="" class="">Sliver</option>
+                                    <option value="space-gray">Space Grey</option>
+                                </select>
+                            </td>
+                        </tr><tr>
+                            <th><label for="specs">Specs</label></th>
+                            <td>
+                                <select id="color" style="margin-left: 10px;">
+                                    <option value="">Choose Option</option>
+                                    <option value="m1-pro-chip-ram-16gb-ssd-512gb" selected="" class="">M1 Pro Chip | RAM 16GB | SSD 512GB</option>
+                                    <option value="m1-pro-chip-ram-16gb-ssd-1t">M1 Pro Chip | RAM 16GB | SSD 1T</option>
+                                    <option value="m1-pro-chip-ram-32gb-ssd-512gb">M1 Pro Chip | RAM 32GB | SSD 512GB</option>
+                                    <option value="m1-max-chip-ram-32gb-ssd-1t">M1 Max Chip | RAM 32GB | SSD 1T</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-center" style="line-height: 22px;">
+                    <div>
+                        <p>Apple M1 Pro with 8-core CPU, 14-core GPU, 16-core Neural Engine</p>
+                        <p>16GB unified memory</p>
+                        <p>512GB SSD storage</p>
+                        <p>67W USB-C Power Adapter</p>
+                        <p>14-inch Liquid Retina XDR display</p>
+                        <p>Three Thunderbolt 4 ports, HDMI port, SDXC card slot, MagSafe 3 port</p>
+                        <p>Backlit Magic Keyboard with Touch ID – US English</p>
+                    </div>
+                    <div class="price">
+                        <p>1.859,00$</p>
+                    </div>
+
+                </div>
+                <div class="text-center" style="display: flex; justify-content:center; align-items:center; gap:30px; line-height:10px;">
+                    <div class="quantity">
+                        <button type="button" class="qty-btn">+</button>
+                        <input type="text" value="1">
+                        <button type="button" class="qty-btn">-</button>
+                      </div>
+                    <button type="submit" class="social-btn">Add to cart</button>
+                </div>
+                <hr>
+                <div class="wishlist text-center">
+                    <a href="../pages/wishlist.html" style="color: var(--ocean-green);">Add to Wishlist</a>
+                </div>
+                <hr>
+                <div class="categories d-flex">
+                    <span>Category: </span>
+                    <a href="#" class="text-primary">Laptop</a>
+                </div>
+                <hr>
+                <div class="tag d-flex">
+                    <span>Tag: </span>
+                    <a href="#">Laptop</a>,
+                    <a href="#">Apple</a>,
+                    <a href="#">M1</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="description">
+                <h3 class="text-primary">Description</h3>
+                <div class="container" style="padding:10px 40px">
+                        <p><strong>Specs</strong></p>
+                        <ul>
+                        <li>CPU: Apple M1 Max with 10-core CPU, 24-core GPU, 16-core Neural Engine | Apple M1 Pro with 10-core CPU, 16-core GPU, 16-core Neural Engine</li>
+                        <li>Ram: Up to 32GB Unified Memory</li>
+                        <li>Storage: Up to 1T SSD</li>
+                        <li>Display: 14.2” Liquid Retina XDR display</li>
+                        <li>3.5mm Headphone Jack</li>
+                        <li>1080p FaceTime HD camera</li>
+                        <li>Three Thunderbolt 4 ports, HDMI port, SDXC card slot, MagSafe 3 port</li>
+                        <li>Magic Keyboard with Touch ID</li>
+                        <li>Force Touch trackpad</li>
+                        <li>67W USB-C Power Adapter</li>
+                        <li>Color: Silver, Space Grey</li>
+                        <li>Weight: 1.6kg</li>
+                        </ul>
+                        <p><strong>Warranty</strong></p>
+                        <ul>
+                        <li>1-year hardware</li>
+                        <li>No warranty for screen, battery, keyboard, fan &amp; speaker, adapter</li>
+                        </ul>
+                        <p><strong>FREE: Sleeve, Mouse Wireless, Mouse Pad, Flash 32GB.</strong></p>
+                </div>
+            </div>
+            <div class="reviews">
+                <h4 class="text-primary">Reviews</h4>
+                <form action="#">
+                    <h4>MacBook Pro 14</h4>
+                    <div class="d-flex" style="justify-content:start;">
+                        <div class="ratings">
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star text-primary"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <h6>2 Reviews</h6>
+                    </div>
+                    <p>
+                        <label for="comment" >Your review&nbsp;<span class="required">*</span></label>
+                        <textarea id="comment" name="comment" cols="20" rows="8" required="" style="resize: none;"></textarea></p>
+                    <p>
+                        <label for="author" >Name&nbsp;<span class="required">*</span></label>
+                        <input id="author" name="author" type="text" value="" size="30" required=""></p>
+                    <p>
+                        <label for="email" >Email&nbsp;<span class="required">*</span></label>
+                        <input id="email" name="email" type="email" value="" size="30" required=""></p>
+                    <p class="d-flex" style="justify-content: start;">
+                        <input id="wp-comment-cookies-consent"  type="checkbox" value="yes" style="width: fit-content;"> 
+                        <label for="wp-comment-cookies-consent" >Save my name, email, and website in this browser for the next time I comment.</label></p>
+                    <p>
+                        <input name="submit" type="submit" id="submit" class="social-btn" value="Submit"> 
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  
+
+
+
+
+    <!--FOOTER-->
+    <footer>
+      <div class="footer-nav">
+  
+        <div class="container">
+  
+          <div class="footer-nav-list">
+              <h1><a href="../index.html" style="color: #1e73be;">DEMO Store</a></h1>
+              <p style="color:aliceblue; font-size: 15px;">Welcome to DEMO Store. We will bring you only high quality products.</p>
+          </div>
+  
+          <ul class="footer-nav-list">
+          
+            <li class="footer-nav-item">
+              <h2 class="nav-title">Menu</h2>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../index.html" class="footer-nav-link">Home</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/product.html" class="footer-nav-link">Product</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/blog.html" class="footer-nav-link">Blog</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/about.html" class="footer-nav-link">About</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="../pages/contact.html" class="footer-nav-link">Contact</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/faq.html" class="footer-nav-link">FAQ</a>
+            </li>
+          
+          </ul>
+  
+          <ul class="footer-nav-list">
+          
+            <li class="footer-nav-item">
+              <h2 class="nav-title">My Account</h2>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/myaccount.html" class="footer-nav-link">Account Profile</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/register.html" class="footer-nav-link">Register</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/login.html" class="footer-nav-link">Login</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/wishlist.html" class="footer-nav-link">Wishlist</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/order-history.html" class="footer-nav-link">Order History</a>
+            </li>
+          
+          </ul>
+  
+          <ul class="footer-nav-list">
+          
+            <li class="footer-nav-item">
+              <h2 class="nav-title">Pages</h2>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/cart.html" class="footer-nav-link">Cart</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/checkout.html" class="footer-nav-link">Checkout</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="../pages/category.html" class="footer-nav-link">Category</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="../pages/product-details.html" class="footer-nav-link">Product Details</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/terms-and-conditions.html" class="footer-nav-link">Terms And Conditions</a>
+            </li>
+          
+            <li class="footer-nav-item">
+              <a href="../pages/privacy-policy.html" class="footer-nav-link">Privacy Policy</a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="../pages/return-policy.html" class="footer-nav-link">Return and Refund Policy</a>
+            </li>
+          
+          </ul>
+  
+          <ul class="footer-nav-list">
+  
+            <li class="footer-nav-item">
+              <h2 class="nav-title">Contact</h2>
+            </li>
+  
+            <li class="footer-nav-item flex">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+  
+              <address class="content">
+                Toulkok, Phnom Penh, Cambodia
+              </address>
+            </li>
+  
+            <li class="footer-nav-item flex">
+              <div class="icon-box">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+  
+              <a href="tel:+855339957" class="footer-nav-link">+855 61339957</a>
+            </li>
+  
+            <li class="footer-nav-item flex">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+  
+              <a href="mailto:cc.thanun@gmail.com" class="footer-nav-link">cc.thanun@gmail.com</a>
+            </li>
+  
+          </ul>
+  
+          <ul class="footer-nav-list">
+  
+            <li class="footer-nav-item">
+              <h2 class="nav-title">Follow Us</h2>
+            </li>
+  
+            <li>
+              <ul class="social-link">
+  
+                <li class="footer-nav-item">
+                  <a href="#" class="footer-nav-link">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+  
+                <li class="footer-nav-item">
+                  <a href="#" class="footer-nav-link">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+  
+                <li class="footer-nav-item">
+                  <a href="#" class="footer-nav-link">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </li>
+  
+                <li class="footer-nav-item">
+                  <a href="#" class="footer-nav-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+  
+              </ul>
+            </li>
+  
+          </ul>
+  
+        </div>
+  
+      </div>
+  
+      <div class="footer-bottom">
+  
+        <div class="container">
+  
+          <img src="../img/payment.png" alt="payment method" class="payment-img">
+  
+          <p class="copyright">
+            Copyright &copy; <a href="../index.html">DEMO Store</a> all rights reserved.
+          </p>
+  
+        </div>
+  
+      </div>
+  
+    </footer>
+  
+    <!--custom js link-->
+    <script src="../js/script.js"></script>
+    <!--Translator-->
+    <script src="../js/translator.js"></script>
+    <!--ionicon link-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+  </body>
+  </html>
